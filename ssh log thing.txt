@@ -1,0 +1,31 @@
+Level 0 - 1
+SSH On port 2220 useing bandit.labs.overthewire.org
+asks for password: that is "bandit0" provided by level 0. We need the text file in the home directory called "readme" - we can use cat to open and read the file "cat readme" that outputs the password for level 1!
+
+
+
+>> ssh -p 2220 bandit.labs.overthewire.org
+>> bandit0
+>> cat readme
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+>> logout
+>> ssh -p 2220 bandit1.labs.overthewire.org
+>> boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+>> ls
+-
+>> cat ./-
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+>> logout
+
+
+>> ssh -p 2220 bandit2.labs.overthewire.org
+>> ls
+spaces in this filename
+>> cat 'spaces in this filename'
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+>> ssh -p 2220 bandit3.labs.overthewire.org
+>> ls
+
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
